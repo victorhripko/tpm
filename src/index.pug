@@ -1,0 +1,23 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(name="keywords" content="keywords")
+    meta(name="description" content="description")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover")
+    link(rel="stylesheet" href="./style.scss")
+    link(rel="shortcut icon" type="image/ico" href="./images/favicon.ico")
+    link(rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.webp")
+    title PM &mdash; Victor Hripko
+  body
+    include components/icons
+
+    .wrapper
+      include components/header
+      include components/hero
+
+    include components/footer
+    include components/popup
+
+    script( src="./index.js" )

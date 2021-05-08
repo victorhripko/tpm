@@ -1,0 +1,26 @@
+include ../mixins/icon
+
+
+.popup
+  .popup__window(data-window="popup")
+    button.popup__close(type="button" data-window-close)
+      +icon('close')
+    h5.popup__title
+      | поздравляем, ты выиграл:
+    h3.popup__bonus 
+      | 500$
+    p.popup__text 
+      | Осталось неиспользованных вращений : 1
+    button.btn.btn--filled.btn--large(type="button" data-window-close)
+      span.btn__text крутить еще
+
+
+  .popup__window(data-window="modal")
+    h5.popup__title
+      | поздравляем, ты выиграл:
+    h3.popup__bonus 
+      | 500$ + 20FS
+    p.popup__text 
+      | Регистрируйся и забирай призы
+    a.btn.btn--filled.btn--large(href="#!")
+      span.btn__text забрать призы

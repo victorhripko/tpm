@@ -1,0 +1,63 @@
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  font-family: $system-font;
+  background-color: black;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  background-color: black;
+  background-image: url('images/bg-cowboy.jpg');
+  background-repeat: no-repeat;
+
+  background-position: 82% bottom;
+  background-size: auto 81%;
+
+  @include bp($md) {
+    background-size: cover;
+  }
+
+  @include bp($hg) {
+    min-height: 100vh;
+    overflow: hidden;
+    background-position: center;
+
+    @supports (-webkit-touch-callout: none) {
+      min-height: -webkit-fill-available;
+    }
+  }
+}
+
+.logo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.link {
+  color: color(white);
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

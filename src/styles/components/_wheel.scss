@@ -1,0 +1,103 @@
+.wheel {
+  position: relative;
+}
+
+.wheel__outside {
+  position: relative;
+  display: block;
+  z-index: 10;
+  pointer-events: none;
+  user-select: none;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.wheel__inside {
+  position: absolute;
+  top: 8.2%;
+  left: 0;
+  right: 0.7%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 81.48614609571788%;
+  z-index: 5;
+  pointer-events: none;
+  user-select: none;
+}
+
+.wheel__inside-picture {
+  display: block;
+  width: 100%;
+}
+
+.wheel__inside-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform-origin: 50% 50%;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  transition: transform 5s ease-in-out;
+
+  &--animated {
+    animation-name: spinBlur;
+  }
+}
+
+@keyframes spinBlur {
+  50% {
+    filter: blur(2px);
+  }
+}
+
+.wheel__btn {
+  all: unset;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  text-align: center;
+  width: 33%;
+  height: 33%;
+  border-radius: 50%;
+  pointer-events: auto;
+  font-family: $PM-font;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.4rem;
+  line-height: 1;
+  text-transform: uppercase;
+  transform: translate(1%, -1%);
+  color: color(black);
+  transition: box-shadow 100ms ease-in-out;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
+
+  &:hover {
+    box-shadow: 0 0 5rem 3rem rgba($accent-color, 0.2);
+  }
+
+  @include bp($md) {
+    padding: 0.5rem;
+    font-size: 2.4rem;
+  }
+
+  @include bp($hg) {
+    padding: 1rem;
+    font-size: 3.4rem;
+  }
+
+  @include bp($max) {
+    font-size: 4.5rem;
+  }
+}

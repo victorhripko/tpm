@@ -1,0 +1,130 @@
+.hero {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  overflow: hidden;
+
+  @include bp($lg) {
+    flex-direction: row;
+  }
+
+  @include bp($hg) {
+    padding-left: 10rem;
+    align-items: flex-start;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 34.8rem;
+    background-image: url('images/smoke.png');
+    background-position: center top;
+    background-size: cover;
+    pointer-events: none;
+    z-index: 100;
+  }
+}
+
+.hero__content {
+  margin-bottom: 5rem;
+
+  @include bp($md) {
+    margin-bottom: 0;
+  }
+
+  @include bp($lg) {
+    padding-top: 20rem;
+    max-width: 30rem;
+  }
+
+  @include bp($hg) {
+    max-width: 50rem;
+  }
+}
+
+.hero__title,
+.hero__subtitle {
+  font-family: $PM-font;
+  font-style: italic;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero__title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: color(accent);
+  font-size: 2.8rem;
+  line-height: 1;
+
+  @include bp($md) {
+    font-size: 4rem;
+  }
+
+  @include bp($hg) {
+    margin-bottom: 2.3rem;
+    font-size: 7.2rem;
+  }
+}
+
+.hero__subtitle {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.4rem;
+  color: color(white);
+
+  @include bp($md) {
+    font-size: 2.8rem;
+  }
+
+  @include bp($hg) {
+    font-size: 4.4rem;
+  }
+}
+
+.hero__link {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: max-content;
+  text-align: center;
+  z-index: 10;
+
+  @include bp($lg) {
+    position: static;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.hero__wheel {
+  margin-top: auto;
+  transform: translateY(1rem) translateX(-5%);
+
+  @include bp($md) {
+    width: 80%;
+  }
+
+  @include bp($lg) {
+    width: 60%;
+    transform: translateY(1rem) translateX(-10%);
+  }
+
+  @include bp($hg) {
+    width: 50%;
+    transform: translateY(1rem);
+  }
+
+  @include bp($max) {
+    width: 40%;
+  }
+}

@@ -1,0 +1,21 @@
+main.hero
+  .hero__content
+    h1.hero__title
+      | КРУТИ КОЛЕСО И ВЫИГРЫВАЙ ПРИЗЫ!
+    a.link.hero__link(href="#!") Правила и условия
+    h2.hero__subtitle
+      | У вас попыток 
+      span.color--accent.hero__wheel-count 2
+  .wheel.hero__wheel
+    picture.wheel__outside
+      source(srcset="images/wheel_outside.webp" type="image/webp")
+      source(srcset="images/wheel_outside.png" type="image/png")
+      img(src="images/wheel_outside.png" alt="wheel outside" width="794" height="903")
+      
+    .wheel__inside
+      picture.wheel__inside-picture
+        source(srcset="images/wheel_inside.webp" type="image/webp")
+        source(srcset="images/wheel_inside.png" type="image/png")
+        img.wheel__inside-image(src="images/wheel_inside.png" alt="wheel inside" width="647" height="647")
+
+      button.wheel__btn(type="button") Крутить

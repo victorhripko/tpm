@@ -1,0 +1,112 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(black, 0.6);
+  z-index: 1000;
+  overflow: auto;
+
+  display: none;
+  padding: 2rem;
+
+  &--open {
+    display: flex;
+  }
+}
+
+.popup__window {
+  display: none;
+  margin: auto;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 2rem 4rem;
+  width: 100%;
+  min-height: 35rem;
+  max-width: 68.2rem;
+  background-color: black;
+  background-image: url('images/smoke.png');
+  background-position: center bottom;
+  background-size: auto 34.8rem;
+  background-repeat: no-repeat;
+  box-shadow: 0 0 1.5rem color(accent);
+
+  &--open {
+    display: flex;
+  }
+
+  @include bp($lg) {
+    padding: 4rem 5rem 6.5rem;
+  }
+}
+
+.popup__close {
+  all: unset;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: white;
+  cursor: pointer;
+  box-sizing: border-box;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    right: -1rem;
+    bottom: -1rem;
+  }
+
+  &:hover {
+    color: color(accent);
+  }
+}
+
+.popup__title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-family: $PM-font;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  color: color(white);
+  text-align: center;
+
+  @include bp($hg) {
+    font-size: 4.4rem;
+  }
+}
+
+.popup__bonus {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: $PM-font;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 4rem;
+  color: color(accent);
+  text-align: center;
+
+  @include bp($hg) {
+    font-size: 12rem;
+  }
+}
+
+.popup__text {
+  margin-bottom: 3rem;
+  font-size: 1.4rem;
+  color: color(white);
+  text-align: center;
+
+  @include bp($hg) {
+    font-size: 2.4rem;
+  }
+}

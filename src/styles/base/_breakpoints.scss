@@ -1,0 +1,10 @@
+$md: 768px;
+$lg: 1024px;
+$hg: 1440px;
+$max: 1920px;
+
+@mixin bp($value) {
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}

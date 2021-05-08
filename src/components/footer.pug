@@ -1,0 +1,37 @@
+include ../mixins/icon
+
+footer.footer 
+
+  .footer-icons.footer-icons--payments
+    +icon('sportbank').footer-icon.footer-icon--sportbank
+    +icon('visa').footer-icon.footer-icon--visa
+    +icon('mastercard').footer-icon.footer-icon--mastercard
+    +icon('privat24').footer-icon.footer-icon--privat24
+
+  .footer-icons.footer-icons--trust
+    a.footer__link(href="#!")
+      img(src="images/trust.png" alt="trust" width="169" height="27")
+
+  .footer-icons.footer-icons--social
+    a.footer__link.footer__link--social(href="#!" aria-label="facebook")
+      +icon('facebook').footer__link-icon
+    a.footer__link.footer__link--social(href="#!" aria-label="instagram")
+      +icon('instagram').footer__link-icon
+    a.footer__link.footer__link--social(href="#!" aria-label="telegram")
+      +icon('telegram').footer__link-icon
+    a.footer__link.footer__link--social(href="#!" aria-label="youtube")
+      +icon('youtube').footer__link-icon
+    a.footer__link.footer__link--social(href="#!" aria-label="viber")
+      +icon('viber').footer__link-icon
+    a.footer__link.footer__link--social(href="#!" aria-label="twitter")
+      +icon('twitter').footer__link-icon
+    a.footer__link.footer__link--social(href="#!" aria-label="tiktok")
+      +icon('tiktok').footer__link-icon
+
+  .footer-icons.footer-icons--download
+    a.footer__linka.footer__link--app(href="#!")
+      img(src="images/casino.svg" alt="casino" width="82" height="24")
+    a.footer__linka.footer__link--app(href="#!")
+      img(src="images/appstore.svg" alt="appstore" width="82" height="24")
+    a.footer__linka.footer__link--app(href="#!")
+      img(src="images/googleplay.svg" alt="playmarket" width="82" height="24")

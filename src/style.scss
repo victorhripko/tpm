@@ -1,0 +1,16 @@
+@import './styles/base/colors';
+@import './styles/base/fonts';
+@import './styles/base/icons';
+@import './styles/base/breakpoints';
+@import './styles/base/custom-reset';
+
+@import './styles/components/button';
+@import './styles/components/popup';
+@import './styles/components/wheel';
+
+@import './styles/layout/general';
+@import './styles/layout/header';
+@import './styles/layout/footer';
+@import './styles/layout/hero';
+
+@import './styles/utils/helpers';

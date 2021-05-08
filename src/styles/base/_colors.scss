@@ -1,0 +1,27 @@
+// Colors.
+$black: #000;
+$white: #fff;
+$yellow: #f8ff13;
+
+// Colors Names.
+$black-color: $black;
+$white-color: $white;
+$accent-color: $yellow;
+
+// Colors Map.
+$colors: (
+  black: $black-color,
+  white: $white-color,
+  accent: $accent-color,
+);
+
+// Colors CSS Variables.
+:root {
+  @each $name, $color in $colors {
+    #{--#{$name}}: $color;
+  }
+}
+
+@function color($color-name) {
+  @return var(--#{$color-name});
+}

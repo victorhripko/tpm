@@ -1,0 +1,130 @@
+.footer {
+  display: grid;
+  row-gap: 2.5rem;
+  column-gap: 2rem;
+  place-items: center;
+  padding: 2rem 1.5rem;
+  background-color: black;
+  z-index: 100;
+
+  @include bp($hg) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+.footer__link {
+  display: block;
+}
+
+.footer__link--app {
+  border-radius: 0.1rem;
+  &:hover {
+    box-shadow: 0 0 0 0.1rem color(accent);
+  }
+}
+
+.footer__link--social {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  transition: color 120ms ease-in-out;
+  z-index: 10;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    right: -1rem;
+    bottom: -1rem;
+    transform: skew(-15deg);
+    transition: background-color 120ms ease-in-out;
+    z-index: -1;
+  }
+
+  &:hover {
+    color: color(black);
+
+    &::before {
+      background-color: color(accent);
+    }
+  }
+}
+
+.footer__link-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.footer-icons {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: min-content;
+  align-items: center;
+  column-gap: 1.5rem;
+}
+
+.footer-icons--payments {
+  @include bp($hg) {
+    order: 1;
+  }
+}
+
+.footer-icons--trust {
+  @include bp($hg) {
+    order: 3;
+  }
+}
+
+.footer-icons--download {
+  column-gap: 1rem;
+
+  @include bp($hg) {
+    order: 2;
+  }
+}
+
+.footer-icons--social {
+  column-gap: 2rem;
+
+  @include bp($hg) {
+    order: 4;
+  }
+}
+
+.footer-icon {
+  display: block;
+  height: 2rem;
+}
+
+.footer-icon--sportbank {
+  width: 8.6rem;
+}
+
+.footer-icon--visa {
+  width: 4rem;
+}
+
+.footer-icon--mastercard {
+  width: 2.6rem;
+}
+
+.footer-icon--privat24 {
+  width: 8.4rem;
+}

@@ -1,0 +1,55 @@
+.btn {
+  all: unset;
+  padding: 0.5rem 3rem 0.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  font-family: $PM-font;
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  line-height: 1;
+  border: 0.15rem solid color(accent);
+  color: color(accent);
+  transition-property: color, background-color;
+  transition-duration: 220ms;
+  transition-timing-function: ease-in-out;
+  transform: skew(-15deg);
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    background-color: color(accent);
+    color: color(black);
+  }
+
+  @include bp($lg) {
+    padding: 1.1rem 4.6rem 1.3rem;
+    font-size: 1.7rem;
+  }
+}
+
+.btn__text {
+  transform: skew(15deg);
+}
+
+.btn--filled {
+  background-color: color(accent);
+  color: color(black);
+
+  &:hover,
+  &:focus {
+    background-color: color(black);
+    color: color(accent);
+  }
+}
+
+.btn--large {
+  @include bp($hg) {
+    padding: 1.8rem 9.5rem 2.1rem;
+    font-size: 3rem;
+  }
+}
